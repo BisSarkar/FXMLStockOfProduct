@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockofproducts.StockController">
+<fx:define>
+    
+    <Insets fx:id="nodeMargins" bottom="10.0" left="10.0" right ="10.0" top="10.0"/>
+</fx:define>
+
+<top>
+<GridPane vgap="5" hgap="5" BorderPane.margin="$nodeMargins">
+<columnConstraints>
+<ColumnConstraints percentWidth="70.0" />
+<ColumnConstraints percentWidth="30.0" />
+
+</columnConstraints>
+<children>
+      <Label fx:id="lblList" GridPane.rowIndex="1" GridPane.columnIndex="0" BorderPane.margin="$nodeMargins" />
+      <Label fx:id="lblProduct" GridPane.rowIndex="1" GridPane.columnIndex="1" BorderPane.margin="$nodeMargins" />
+ 
+      <ListView fx:id="stockLV" GridPane.rowIndex="3" GridPane.columnIndex="0"/> 
+      <VBox GridPane.rowIndex="3" GridPane.columnIndex="1">
+            <children>
+                 <TextField fx:id="txtProdId"  BorderPane.margin="$nodeMargins"/> 
+                 <TextField fx:id="txtProdName"  BorderPane.margin="$nodeMargins"/>
+                 <TextField fx:id="txtProdQty"  BorderPane.margin="$nodeMargins"/> 
+                 <TextField fx:id="txtProdPoint"  BorderPane.margin="$nodeMargins"/>
+                 <TextField fx:id="txtProdSprice"  BorderPane.margin="$nodeMargins"/> 
+                 <TextField fx:id="txtProdBPrice"  BorderPane.margin="$nodeMargins"/>
+                 <Button fx:id="btnAddProduct" text="Add Product"  onAction="#addProduct" mnemonicParsing="true"/>
+                 <Label fx:id="lblItemToBuy" BorderPane.margin="$nodeMargins" />
+                 <TextField fx:id="txtItemToBuy"  BorderPane.margin="$nodeMargins"/>
+                 <Button fx:id="btnBuy" text="Buy" onAction="#buy" mnemonicParsing="true"/>
+                 <Label fx:id="lblItemPrice" BorderPane.margin="$nodeMargins"/>
+    
+            </children>
+     </VBox>
+     
+         <Label fx:id="lblProrductDisplay" GridPane.rowIndex="4" GridPane.columnIndex="0" BorderPane.margin="$nodeMargins" />
+          <Label fx:id="lblError"  GridPane.rowIndex="5" GridPane.columnIndex="0" BorderPane.margin="$nodeMargins" />
+          
+</children>
+</GridPane>
+</top>
+</BorderPane>
